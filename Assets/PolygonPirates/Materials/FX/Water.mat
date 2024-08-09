@@ -21,8 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Water
-  m_Shader: {fileID: -6465566751694194690, guid: 9e6289730d5b1de44a263724f4e80da2, type: 3}
-  m_Parent: {fileID: 2100000, guid: b6a5b82f0c38a8f4ebcba3a008ab43b2, type: 2}
+  m_Shader: {fileID: -6465566751694194690, guid: 81b25ce022da61b46a22a4481fe38167, type: 3}
+  m_Parent: {fileID: 2100000, guid: b256c3720ed988c4b9f9a322ea9b1f4f, type: 2}
   m_ModifiedSerializedProperties: 22
   m_ValidKeywords: []
   m_InvalidKeywords:
@@ -43,18 +43,22 @@ Material:
         m_Texture: {fileID: 2800000, guid: 58ec8dad770fcd14b886e0d4a6f25526, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Not_Working_Normal_Map:
+        m_Texture: {fileID: 2800000, guid: 58ec8dad770fcd14b886e0d4a6f25526, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _Fade: 1
     - _Fresnel_Power: 1
     - _Height: 13.66
-    - _Offset: 0.2
+    - _Offset: -4.8
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Reflection_factor: 0
     m_Colors:
-    - Valleys: {r: 0.110137075, g: 0.19642965, b: 0.7075472, a: 0}
-    - _FernelColor: {r: 0.3584906, g: 0.34327164, b: 0.34327164, a: 0}
-    - _Peaks: {r: 0.2732734, g: 0.78368694, b: 0.8396226, a: 0}
+    - Valleys: {r: 0.039248846, g: 0.053367853, b: 0.13207549, a: 0}
+    - _FernelColor: {r: 0.12726948, g: 0.18867922, b: 0.13848677, a: 0}
+    - _Peaks: {r: 0.6069776, g: 0.6957905, b: 0.8301887, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
