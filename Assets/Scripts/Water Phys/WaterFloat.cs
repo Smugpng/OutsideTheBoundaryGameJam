@@ -13,11 +13,13 @@ public class WaterFloat : MonoBehaviour
     public bool AffectDirection = true;
     public bool AttachToSurface = false;
     public Transform[] FloatPoints;
+    public bool inWater;
+    private bool isPlayer;
 
     //used components
     protected Rigidbody Rigidbody;
     [SerializeField] protected Waves Waves;
-    protected PlayerController playerController;
+    public PlayerController playerController;
     
     //water line
     protected float WaterLine;
@@ -34,13 +36,19 @@ public class WaterFloat : MonoBehaviour
     void Awake()
     {
         //get components
-        Waves = FindObjectOfType<Waves>();
+        Waves = FindFirstObjectByType<Waves>();
         Rigidbody = GetComponent<Rigidbody>();
         Rigidbody.useGravity = false;
-        if (playerController != null )
+        if (gameObject.tag == "Player")
+        {
+            isPlayer = true;
+        }
+        if (isPlayer)
         {
             playerController = GetComponent<PlayerController>();
         }
+        
+        
 
         //compute center
         WaterLinePoints = new Vector3[FloatPoints.Length];
@@ -79,10 +87,13 @@ public class WaterFloat : MonoBehaviour
         Rigidbody.drag = AirDrag;
         if (WaterLine > Center.y)
         {
+            
             Rigidbody.drag = WaterDrag;
             if (playerController != null)
             {
-                playerController.moveDirection.y = 0;
+                Debug.Log(gameObject.name + "in water");
+                playerController.inWater = true;
+                inWater = true;
             }
             //under water
             if (AttachToSurface)

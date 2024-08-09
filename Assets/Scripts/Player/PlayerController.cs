@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     float rotationX = 0;
 
     public bool canMove = true;
+    public bool inWater = false;
 
     // Start is called before the first frame update
     void Start()
@@ -55,9 +56,13 @@ public class PlayerController : MonoBehaviour
             moveDirection.y = moveDirectionY;
         }
 
-        if (!characterController.isGrounded)
+        if (!characterController.isGrounded && !inWater)
         {
             moveDirection.y -= gravity * Time.deltaTime;
+        }
+        else if (!characterController.isGrounded && inWater)
+        {
+            moveDirection.y = 0;
         }
 
         #endregion

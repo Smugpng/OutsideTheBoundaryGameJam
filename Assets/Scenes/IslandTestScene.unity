@@ -218,7 +218,9 @@ MonoBehaviour:
   AttachToSurface: 1
   FloatPoints:
   - {fileID: 1840564758}
+  inWater: 0
   Waves: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!54 &93415304
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -288,7 +290,9 @@ MonoBehaviour:
   - {fileID: 1177295146}
   - {fileID: 1114947532}
   - {fileID: 2012246173}
+  inWater: 0
   Waves: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!54 &96870145
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -591,7 +595,9 @@ MonoBehaviour:
   AttachToSurface: 1
   FloatPoints:
   - {fileID: 375731581}
+  inWater: 0
   Waves: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!54 &375731577
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -834,15 +840,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2015176511302580806, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 198.05968
+      value: 199.4
       objectReference: {fileID: 0}
     - target: {fileID: 2015176511302580806, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.6096632
+      value: 5.61
       objectReference: {fileID: 0}
     - target: {fileID: 2015176511302580806, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 199.42372
+      value: 198.64
       objectReference: {fileID: 0}
     - target: {fileID: 2015176511302580806, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_LocalRotation.w
@@ -873,12 +879,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2484274509852135426, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484274509852135426, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 725293863}
     - target: {fileID: 6302536675445872747, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6302536675445872747, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639358250933118728, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1222,6 +1240,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 64243502915088406, guid: f997b4da461b427448692385e302007f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1279,7 +1301,9 @@ MonoBehaviour:
   - {fileID: 214518497}
   - {fileID: 1792858078}
   - {fileID: 1371811904}
+  inWater: 0
   Waves: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!54 &1258840202
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1324,7 +1348,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 10.323998, y: 7.9012547, z: 27.385468}
   m_Center: {x: -0.00000047683716, y: 3.939786, z: -2.900879}
@@ -1549,7 +1573,7 @@ Transform:
   m_GameObject: {fileID: 1840564757}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.874, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -45,7 +45,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Not_Working_Normal_Map:
         m_Texture: {fileID: 2800000, guid: 58ec8dad770fcd14b886e0d4a6f25526, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
@@ -55,7 +55,7 @@ Material:
     - _Offset: -4.8
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Reflection_factor: 0
+    - _Reflection_factor: -0.17
     m_Colors:
     - Valleys: {r: 0.039248846, g: 0.053367853, b: 0.13207549, a: 0}
     - _FernelColor: {r: 0.12726948, g: 0.18867922, b: 0.13848677, a: 0}
