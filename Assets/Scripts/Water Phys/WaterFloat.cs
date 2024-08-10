@@ -95,6 +95,10 @@ public class WaterFloat : MonoBehaviour
                 playerController.inWater = true;
                 inWater = true;
             }
+            else 
+            {
+                inWater = true ;
+            }
             //under water
             if (AttachToSurface)
             {

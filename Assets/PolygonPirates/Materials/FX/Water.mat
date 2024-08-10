@@ -44,15 +44,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Not_Working_Normal_Map:
-        m_Texture: {fileID: 2800000, guid: 58ec8dad770fcd14b886e0d4a6f25526, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fade: 1
+    - _Fade: 4.5
     - _Fresnel_Power: 1
     - _Height: 13.66
-    - _Offset: -4.8
+    - _Offset: -3.6
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Reflection_factor: -0.17
