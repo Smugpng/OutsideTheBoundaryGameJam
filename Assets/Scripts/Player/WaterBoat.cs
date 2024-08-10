@@ -67,6 +67,7 @@ public class WaterBoat : MonoBehaviour
             else
                 ParticleSystem.Pause();
         }
+        
 
         //moving forward
         var movingForward = Vector3.Cross(transform.forward, Rigidbody.velocity).y < 0;

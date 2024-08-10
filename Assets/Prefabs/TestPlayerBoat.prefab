@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 8002418173289222285}
   m_Layer: 0
   m_Name: TestPlayerBoat
-  m_TagString: Player
+  m_TagString: Boat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -615,8 +615,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Motor: {fileID: 1094161107509181789}
   SteerPower: 500
-  Power: 5
-  MaxSpeed: 20
+  Power: 10
+  MaxSpeed: 30
   Drag: 0.1
 --- !u!1 &2118641046787602406
 GameObject:

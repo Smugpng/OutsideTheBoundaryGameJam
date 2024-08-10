@@ -630,6 +630,28 @@ MonoBehaviour:
   borderDirection: 2
   isEdge: 0
   inStorm: 1
+--- !u!64 &1094145846
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251943032}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: 75c5753e85a4bab46867a56d1edcf3ed, type: 3}
 --- !u!1 &1243791765
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,6 +983,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1309726246151190642, guid: 1c119ada8dd979f4690a9f8c741aeab6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1094145846}
     - targetCorrespondingSourceObject: {fileID: 1309726246151190642, guid: 1c119ada8dd979f4690a9f8c741aeab6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1094145845}

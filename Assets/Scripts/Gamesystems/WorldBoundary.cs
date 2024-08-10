@@ -100,9 +100,7 @@ public class WorldBoundary : MonoBehaviour
     }
     private void LoadStormScene()
     {
-        //StormScene Will be in 10 slot;
-        //SceneManager.LoadScene(10);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(10);
     }
     private void LoadNextScene()
     {
@@ -112,7 +110,7 @@ public class WorldBoundary : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Boat")
         {
             NextScene(borderDirection);
         }

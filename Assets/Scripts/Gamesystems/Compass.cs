@@ -4,12 +4,35 @@ using UnityEngine;
 
 public class Compass : MonoBehaviour
 {
-    public Transform playerTransform;
+    private Transform curentTransform;
     Vector3 playerDir;
+    private GameObject player, boat;
+
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        boat = GameObject.FindGameObjectWithTag("Boat");
+        if (boat.activeInHierarchy)
+        {
+            curentTransform = boat.transform;
+        }
+        else
+        {
+            curentTransform = player.transform;
+        }
+    }
 
     private void Update()
     {
-        playerDir.z = playerTransform.eulerAngles.y;
+        if (boat.activeInHierarchy)
+        {
+            curentTransform = boat.transform;
+        }
+        else
+        {
+            curentTransform = player.transform;
+        }
+        playerDir.z = curentTransform.eulerAngles.y;
         transform.localEulerAngles = playerDir;
     }
 }

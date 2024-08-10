@@ -376,6 +376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rain02_HighPerformance
       objectReference: {fileID: 0}
+    - target: {fileID: 1804996448741040, guid: 5ead19b15e36162489c83300d5a86365, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4611659351538192, guid: 5ead19b15e36162489c83300d5a86365, type: 3}
       propertyPath: m_LocalScale.x
       value: 1

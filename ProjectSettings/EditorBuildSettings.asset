@@ -9,14 +9,35 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 89d0e89d1bca6324389b0d45ea8416bc
   - enabled: 1
-    path: Assets/Scenes/IslandTestScene.unity
+    path: Assets/Scenes/Islands 1-9/Island1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Islands 1-9/Island2.unity
+    guid: 19dc5d25ac1bda54c8e8c725849ec0ec
+  - enabled: 1
+    path: Assets/Scenes/Islands 1-9/Island3.unity
+    guid: 193c02aa4fe3baa47a76c890c57777cc
+  - enabled: 1
+    path: Assets/Scenes/Islands 1-9/Island4.unity
+    guid: a7938445086164648a3fa3d9926427ad
+  - enabled: 1
+    path: Assets/Scenes/Islands 1-9/Island5.unity
+    guid: dd593ee5bc1ec0f44a35b6b29f379ff8
+  - enabled: 1
+    path: Assets/Scenes/Islands 1-9/Island6.unity
+    guid: d0f0cf8f076749148b39deb9a58c2e4f
+  - enabled: 1
+    path: Assets/Scenes/Islands 1-9/Island7.unity
+    guid: 0d3119136fb20574a8c5e608c995305f
+  - enabled: 1
+    path: Assets/Scenes/Islands 1-9/Island8.unity
+    guid: e3c8f90f030e1574386d521f0689faa4
+  - enabled: 1
+    path: Assets/Scenes/Islands 1-9/Island9.unity
+    guid: 3064ec4b1d11d0c41a717b07db4035b7
   - enabled: 1
     path: Assets/Scenes/Stormy Scene.unity
     guid: b051cf93419d0be4e8eccfcbfdd30bd4
-  - enabled: 1
-    path: Assets/Scenes/IslandNextDifficulty.unity
-    guid: 4f036b198fa1bab4bb622c5a5e55d49c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: dfcbe7cfdebb84e7b9416c31e6c07ba7, type: 3}
   m_UseUCBPForAssetBundles: 0
