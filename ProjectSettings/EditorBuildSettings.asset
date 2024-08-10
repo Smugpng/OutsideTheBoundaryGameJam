@@ -9,32 +9,32 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 89d0e89d1bca6324389b0d45ea8416bc
   - enabled: 1
-    path: Assets/Scenes/Islands 1-9/Island1.unity
+    path: Assets/Scenes/Islands 1-9/Island 1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Islands 1-9/Island2.unity
-    guid: 19dc5d25ac1bda54c8e8c725849ec0ec
+    path: Assets/Scenes/Islands 1-9/Island 2.unity
+    guid: 720b320409f1a0e44ad1ab09c30c43d7
   - enabled: 1
-    path: Assets/Scenes/Islands 1-9/Island3.unity
-    guid: 193c02aa4fe3baa47a76c890c57777cc
+    path: Assets/Scenes/Islands 1-9/Island 3.unity
+    guid: 0115d2a99a9af9946841eb279afb3385
   - enabled: 1
-    path: Assets/Scenes/Islands 1-9/Island4.unity
-    guid: a7938445086164648a3fa3d9926427ad
+    path: Assets/Scenes/Islands 1-9/Island 4.unity
+    guid: f419aec744bb1d44ab18aec49cf94a55
   - enabled: 1
-    path: Assets/Scenes/Islands 1-9/Island5.unity
-    guid: dd593ee5bc1ec0f44a35b6b29f379ff8
+    path: Assets/Scenes/Islands 1-9/Island 5.unity
+    guid: 7f0924b13ef9bd842a98bc07eca5a79e
   - enabled: 1
-    path: Assets/Scenes/Islands 1-9/Island6.unity
-    guid: d0f0cf8f076749148b39deb9a58c2e4f
+    path: Assets/Scenes/Islands 1-9/Island 6.unity
+    guid: d76d839981613f742b665950f657479b
   - enabled: 1
-    path: Assets/Scenes/Islands 1-9/Island7.unity
-    guid: 0d3119136fb20574a8c5e608c995305f
+    path: Assets/Scenes/Islands 1-9/Island 7.unity
+    guid: 9d6ae7a2c2877544b85143113dc29557
   - enabled: 1
-    path: Assets/Scenes/Islands 1-9/Island8.unity
-    guid: e3c8f90f030e1574386d521f0689faa4
+    path: Assets/Scenes/Islands 1-9/Island 8.unity
+    guid: a7e893db64fd47d4c9f534f7b9c79f90
   - enabled: 1
-    path: Assets/Scenes/Islands 1-9/Island9.unity
-    guid: 3064ec4b1d11d0c41a717b07db4035b7
+    path: Assets/Scenes/Islands 1-9/Island 9.unity
+    guid: 3b4e64918e7049b4badc601193ecbb32
   - enabled: 1
     path: Assets/Scenes/Stormy Scene.unity
     guid: b051cf93419d0be4e8eccfcbfdd30bd4
