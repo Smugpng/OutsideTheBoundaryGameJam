@@ -83,7 +83,7 @@ public class WaterFloat : MonoBehaviour
         TargetUp = PhysicsHelper.GetNormal(WaterLinePoints);
 
         //gravity
-        var gravity = Physics.gravity;
+        var gravity = Physics.gravity * 2;
         Rigidbody.drag = AirDrag;
         if (WaterLine > Center.y)
         {

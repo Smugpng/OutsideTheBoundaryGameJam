@@ -32,7 +32,7 @@ public class SwapFunctions : MonoBehaviour
             waterBoat.enabled = false;
             player.SetActive(true);
             player.transform.position = playerSpawnPos.position;
-            player.transform.rotation = playerSpawnPos.rotation;
+            //player.transform.rotation
             thisSwap.enabled = false;
         }
         else if(tag == "Player")

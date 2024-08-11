@@ -55,8 +55,6 @@ public class WaterBoat : MonoBehaviour
         //forward/backward poewr
         if (Input.GetKey(KeyCode.W))
             PhysicsHelper.ApplyForceToReachVelocity(Rigidbody, forward * MaxSpeed, Power);
-        if (Input.GetKey(KeyCode.S))
-            PhysicsHelper.ApplyForceToReachVelocity(Rigidbody, forward * -MaxSpeed, Power);
 
         //Motor Animation // Particle system
         Motor.SetPositionAndRotation(Motor.position, transform.rotation * StartRotation * Quaternion.Euler(0, 30f * steer, 0));

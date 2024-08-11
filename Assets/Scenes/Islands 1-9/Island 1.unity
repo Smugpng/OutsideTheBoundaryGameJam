@@ -167,33 +167,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1320424251793636754, guid: f79ab2e56b0543f46b7a6259708a1d63, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 25.519089
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320424251793636754, guid: f79ab2e56b0543f46b7a6259708a1d63, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.057358
-      objectReference: {fileID: 0}
-    - target: {fileID: 2289265982884314816, guid: f79ab2e56b0543f46b7a6259708a1d63, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 25.519089
-      objectReference: {fileID: 0}
-    - target: {fileID: 2289265982884314816, guid: f79ab2e56b0543f46b7a6259708a1d63, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.057358
-      objectReference: {fileID: 0}
     - target: {fileID: 2509802846516730365, guid: f79ab2e56b0543f46b7a6259708a1d63, type: 3}
       propertyPath: m_Name
       value: Vcam
-      objectReference: {fileID: 0}
-    - target: {fileID: 2509802846516730365, guid: f79ab2e56b0543f46b7a6259708a1d63, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2509802846516730365, guid: f79ab2e56b0543f46b7a6259708a1d63, type: 3}
-      propertyPath: m_TagString
-      value: BoatCam
       objectReference: {fileID: 0}
     - target: {fileID: 7044326729325036066, guid: f79ab2e56b0543f46b7a6259708a1d63, type: 3}
       propertyPath: m_LocalPosition.x
@@ -242,7 +218,7 @@ PrefabInstance:
     - target: {fileID: 7460252656218640064, guid: f79ab2e56b0543f46b7a6259708a1d63, type: 3}
       propertyPath: m_LookAt
       value: 
-      objectReference: {fileID: 717034081}
+      objectReference: {fileID: 373137040}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -373,6 +349,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6497021567047877545, guid: 48172c96b1ccc5445815fd42916ff6ea, type: 3}
   m_PrefabInstance: {fileID: 3736998637126691272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &373137040 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7027813869285239165, guid: 55fa45b00e155484a8f45606f00c419a, type: 3}
+  m_PrefabInstance: {fileID: 717034080}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &621095094 stripped
 GameObject:
@@ -508,18 +489,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestPlayerBoat
       objectReference: {fileID: 0}
-    - target: {fileID: 1601197553289296802, guid: 55fa45b00e155484a8f45606f00c419a, type: 3}
-      propertyPath: m_TagString
-      value: Boat
-      objectReference: {fileID: 0}
-    - target: {fileID: 2547390324496075561, guid: 55fa45b00e155484a8f45606f00c419a, type: 3}
-      propertyPath: m_Size.y
-      value: 6.9514365
-      objectReference: {fileID: 0}
-    - target: {fileID: 2547390324496075561, guid: 55fa45b00e155484a8f45606f00c419a, type: 3}
-      propertyPath: m_Center.y
-      value: 3.464877
-      objectReference: {fileID: 0}
     - target: {fileID: 6585930540676735728, guid: 55fa45b00e155484a8f45606f00c419a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 227.86865
@@ -560,14 +529,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7144313660263892568, guid: 55fa45b00e155484a8f45606f00c419a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8002418173289222285, guid: 55fa45b00e155484a8f45606f00c419a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8097028784719779820, guid: 55fa45b00e155484a8f45606f00c419a, type: 3}
       propertyPath: player
       value: 
@@ -580,8 +541,7 @@ PrefabInstance:
       propertyPath: otherSwap
       value: 
       objectReference: {fileID: 725293863}
-    m_RemovedComponents:
-    - {fileID: 7144313660263892568, guid: 55fa45b00e155484a8f45606f00c419a, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -636,15 +596,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2015176511302580806, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 199.4
+      value: 227.976
       objectReference: {fileID: 0}
     - target: {fileID: 2015176511302580806, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.61
+      value: 4.464
       objectReference: {fileID: 0}
     - target: {fileID: 2015176511302580806, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 198.64
+      value: 164.52
       objectReference: {fileID: 0}
     - target: {fileID: 2015176511302580806, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_LocalRotation.w
@@ -674,6 +634,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2484274509852135426, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2666034950023777421, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: player
       value: 
@@ -694,10 +658,6 @@ PrefabInstance:
       propertyPath: playerSpawnPos
       value: 
       objectReference: {fileID: 717034082}
-    - target: {fileID: 4805612548670869241, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.55
-      objectReference: {fileID: 0}
     - target: {fileID: 6302536675445872747, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_Name
       value: Player
@@ -705,6 +665,10 @@ PrefabInstance:
     - target: {fileID: 6302536675445872747, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639358250933118728, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1235,6 +1199,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 3a5c175e6cf742f4f93dfcbf02e6c0f7, type: 2}
+    - target: {fileID: 5802059625596426736, guid: 48172c96b1ccc5445815fd42916ff6ea, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5864212409492740371, guid: 48172c96b1ccc5445815fd42916ff6ea, type: 3}
       propertyPath: m_Name
       value: FogWall
