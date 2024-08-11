@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public float lookXLimit = 45f;
 
     public Vector3 moveDirection = Vector3.zero;
+    public Transform floatPoint;
     float rotationX = 0;
 
     public bool canMove = true;

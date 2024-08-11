@@ -7,6 +7,7 @@ TagManager:
   - BoatCam
   - Boat
   - InteractionUI
+  - Spawner
   layers:
   - Default
   - TransparentFX

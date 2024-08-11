@@ -39,6 +39,8 @@ public class WorldBoundary : MonoBehaviour
     {
         if (!inStorm)
         {
+            PlayerPrefs.SetInt("ThreatMultiplier", +1);
+            Debug.Log(PlayerPrefs.GetInt("ThreatMultiplier"));
             if (borderDirection == BorderDirection.North)
             {
                 if (!isEdge)

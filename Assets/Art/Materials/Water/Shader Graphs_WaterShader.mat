@@ -42,17 +42,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fade: 1
+    - _Fade: 1.19
     - _Fresnel_Power: 1
     - _Height: 0
-    - _Offset: 0
+    - _Offset: -0.13
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Reflection_factor: 50
     m_Colors:
-    - Valleys: {r: 0, g: 0.05474576, b: 0.3773585, a: 0}
-    - _FernelColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Peaks: {r: 0, g: 0.867816, b: 1, a: 0}
+    - Valleys: {r: 0.46844962, g: 0.78116363, b: 0.8207547, a: 0}
+    - _FernelColor: {r: 0.09678713, g: 0.21769503, b: 0.23584908, a: 0}
+    - _Peaks: {r: 0.63834995, g: 0.8962264, b: 0.8728441, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8480450823763052377

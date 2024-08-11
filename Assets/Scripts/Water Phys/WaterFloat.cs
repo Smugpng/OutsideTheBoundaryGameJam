@@ -91,7 +91,6 @@ public class WaterFloat : MonoBehaviour
             Rigidbody.drag = WaterDrag;
             if (playerController != null)
             {
-                Debug.Log(gameObject.name + "in water");
                 playerController.inWater = true;
                 inWater = true;
             }

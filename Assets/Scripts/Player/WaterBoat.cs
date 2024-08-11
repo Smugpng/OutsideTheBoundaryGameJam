@@ -26,7 +26,6 @@ public class WaterBoat : MonoBehaviour
 
     public void Awake()
     {
-        ParticleSystem = GetComponentInChildren<ParticleSystem>();
         Rigidbody = GetComponent<Rigidbody>();
         StartRotation = Motor.localRotation;
         Camera = Camera.main;
