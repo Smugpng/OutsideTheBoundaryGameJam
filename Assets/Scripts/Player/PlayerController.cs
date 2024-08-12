@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -31,6 +32,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (characterController.isGrounded)
+        {
+            inWater = false;
+        }
+        
         #region Handles player movement
 
         Vector3 forward = transform.TransformDirection(Vector3.forward);
@@ -64,6 +70,10 @@ public class PlayerController : MonoBehaviour
         else if (!characterController.isGrounded && inWater)
         {
             moveDirection.y = 0;
+            //float newY = transform.position.y - floatPoint.position.y;
+            
+          //Vector3 fuck = new Vector3(transform.position.x, floatPoint.position.y, transform.position.z);
+            //transform.position = Vector3.MoveTowards(transform.position,fuck,2);
         }
 
         #endregion
@@ -81,6 +91,14 @@ public class PlayerController : MonoBehaviour
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
 
             #endregion
+        }
+    }
+    public void Test(float y)
+    {
+        if (!characterController.isGrounded)
+        {
+            Vector3 fuck = new Vector3(transform.position.x, y, transform.position.z);
+            transform.position = fuck;
         }
     }
 
