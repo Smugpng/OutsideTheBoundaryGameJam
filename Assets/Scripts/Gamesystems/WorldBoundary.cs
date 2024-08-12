@@ -21,12 +21,10 @@ public class WorldBoundary : MonoBehaviour
         if(inStorm)
         {
             sceneNumber = PlayerPrefs.GetInt("NextScene");
-            Debug.Log("After strom going to" + sceneNumber);
         }
         else
         {
             sceneNumber = SceneManager.GetActiveScene().buildIndex;
-            Debug.Log("Currently In" + sceneNumber);
         }
  
     }
@@ -40,7 +38,6 @@ public class WorldBoundary : MonoBehaviour
         if (!inStorm)
         {
             PlayerPrefs.SetInt("ThreatMultiplier", +1);
-            Debug.Log(PlayerPrefs.GetInt("ThreatMultiplier"));
             if (borderDirection == BorderDirection.North)
             {
                 if (!isEdge)
@@ -89,13 +86,11 @@ public class WorldBoundary : MonoBehaviour
                 }
 
             }
-            Debug.Log("Heading into storm to" + sceneNumber);
             PlayerPrefs.SetInt("NextScene", sceneNumber);
             Invoke("LoadStormScene", 1f);
         }
         else
         {
-            Debug.Log("Arriving to" + sceneNumber);
             Invoke("LoadNextScene", 1f);
         }
         

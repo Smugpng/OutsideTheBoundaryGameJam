@@ -588,6 +588,10 @@ PrefabInstance:
       value: TestPlayerBoat
       objectReference: {fileID: 0}
     - target: {fileID: 1601197553289296802, guid: 55fa45b00e155484a8f45606f00c419a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601197553289296802, guid: 55fa45b00e155484a8f45606f00c419a, type: 3}
       propertyPath: m_TagString
       value: Boat
       objectReference: {fileID: 0}
@@ -659,6 +663,10 @@ PrefabInstance:
       propertyPath: otherSwap
       value: 
       objectReference: {fileID: 725293863}
+    - target: {fileID: 8182265314855594840, guid: 55fa45b00e155484a8f45606f00c419a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7144313660263892568, guid: 55fa45b00e155484a8f45606f00c419a, type: 3}
     m_RemovedGameObjects: []
@@ -711,24 +719,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 698276201268987710, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
-      propertyPath: inWater
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 698276201268987710, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
-      propertyPath: AffectDirection
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: 'FloatPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1217905846}
     - target: {fileID: 2015176511302580806, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 199.4
+      value: 224.29
       objectReference: {fileID: 0}
     - target: {fileID: 2015176511302580806, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.61
+      value: 2.92
       objectReference: {fileID: 0}
     - target: {fileID: 2015176511302580806, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 198.64
+      value: 166.85
       objectReference: {fileID: 0}
     - target: {fileID: 2015176511302580806, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_LocalRotation.w
@@ -778,13 +786,13 @@ PrefabInstance:
       propertyPath: playerSpawnPos
       value: 
       objectReference: {fileID: 717034082}
-    - target: {fileID: 4805612548670869241, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.55
-      objectReference: {fileID: 0}
     - target: {fileID: 6302536675445872747, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6302536675445872747, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6302536675445872747, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_IsActive
@@ -1014,7 +1022,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1026,6 +1034,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!4 &1217905846 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4805612548670869241, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
+  m_PrefabInstance: {fileID: 725293862}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1706876227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1205,6 +1218,10 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 717034081}
+    - target: {fileID: 5774055388020475024, guid: cf4cd6c51ae725b47b9213253fd02453, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6783927478864777039, guid: cf4cd6c51ae725b47b9213253fd02453, type: 3}
       propertyPath: m_Pivot.x
       value: 0

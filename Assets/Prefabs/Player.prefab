@@ -128,12 +128,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AirDrag: 1
-  WaterDrag: 10
-  AffectDirection: 0
+  WaterDrag: 0.1
+  AffectDirection: 1
   AttachToSurface: 1
   FloatPoints:
   - {fileID: 4805612548670869241}
-  inWater: 0
   Waves: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!114 &2666034950023777421
@@ -179,7 +178,7 @@ Transform:
   m_GameObject: {fileID: 6849461210408793294}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.203, z: 0}
+  m_LocalPosition: {x: 0, y: -0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

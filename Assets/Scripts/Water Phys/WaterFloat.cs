@@ -13,7 +13,7 @@ public class WaterFloat : MonoBehaviour
     public bool AffectDirection = true;
     public bool AttachToSurface = false;
     public Transform[] FloatPoints;
-    public bool inWater;
+    //public bool inWater;
     private bool isPlayer;
 
     //used components
@@ -91,16 +91,13 @@ public class WaterFloat : MonoBehaviour
             Rigidbody.drag = WaterDrag;
             if (playerController != null)
             {
+                playerController.Test(WaterLinePoints[0].y);
                 playerController.inWater = true;
-                inWater = true;
-            }
-            else 
-            {
-                inWater = true ;
             }
             //under water
             if (AttachToSurface)
             {
+                
                 //attach to water surface
                 Rigidbody.position = new Vector3(Rigidbody.position.x, WaterLine - centerOffset.y, Rigidbody.position.z);
             }

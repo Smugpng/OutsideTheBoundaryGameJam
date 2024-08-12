@@ -21,12 +21,10 @@ public class ThreatSpawn : MonoBehaviour
         int randomNum = Random.Range(1, 10);
         if (randomNum <= spawnChance)
         {
-            Debug.Log("Spawning" + randomNum);
             Invoke("Spawn", 1f);
         }
         else
         {
-            Debug.Log("Not Spawning" + randomNum);
         }
     }
     public void Spawn()
