@@ -187,7 +187,6 @@ MonoBehaviour:
   AttachToSurface: 1
   FloatPoints:
   - {fileID: 1840564758}
-  inWater: 0
   Waves: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!54 &93415304
@@ -536,6 +535,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 239776969254663579, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
+      propertyPath: ammoDisplay
+      value: 
+      objectReference: {fileID: 763221630545069424}
     - target: {fileID: 2015176511302580806, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_LocalPosition.x
       value: 201.22336
@@ -661,6 +664,8 @@ MonoBehaviour:
   borderDirection: 2
   isEdge: 0
   inStorm: 1
+  fade: {fileID: 763221630545069425}
+  startFade: 0
 --- !u!64 &1094145846
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -883,6 +888,8 @@ MonoBehaviour:
   borderDirection: 3
   isEdge: 0
   inStorm: 1
+  fade: {fileID: 763221630545069425}
+  startFade: 0
 --- !u!1 &1840564757
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,6 +963,8 @@ MonoBehaviour:
   borderDirection: 1
   isEdge: 0
   inStorm: 1
+  fade: {fileID: 763221630545069425}
+  startFade: 0
 --- !u!1001 &616587661236604908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1033,6 +1042,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3719316024096584872, guid: cf4cd6c51ae725b47b9213253fd02453, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 93415299}
     - target: {fileID: 5235368142928966050, guid: cf4cd6c51ae725b47b9213253fd02453, type: 3}
       propertyPath: playerTransform
       value: 
@@ -1122,6 +1135,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf4cd6c51ae725b47b9213253fd02453, type: 3}
+--- !u!114 &763221630545069424 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5774570036496562500, guid: cf4cd6c51ae725b47b9213253fd02453, type: 3}
+  m_PrefabInstance: {fileID: 763221630545069423}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!225 &763221630545069425 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 5611916778167568768, guid: cf4cd6c51ae725b47b9213253fd02453, type: 3}
+  m_PrefabInstance: {fileID: 763221630545069423}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1506721964622433810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1153,6 +1182,10 @@ PrefabInstance:
     - target: {fileID: 1320424251793636754, guid: f79ab2e56b0543f46b7a6259708a1d63, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.007037682
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334579939585518087, guid: f79ab2e56b0543f46b7a6259708a1d63, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2289265982884314816, guid: f79ab2e56b0543f46b7a6259708a1d63, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1248,6 +1281,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 44168533}
     m_Modifications:
+    - target: {fileID: 2172892681019733492, guid: 48172c96b1ccc5445815fd42916ff6ea, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 763221630545069425}
     - target: {fileID: 5864212409492740371, guid: 48172c96b1ccc5445815fd42916ff6ea, type: 3}
       propertyPath: m_Name
       value: FogWall
@@ -1348,6 +1385,26 @@ PrefabInstance:
     - target: {fileID: 8966741730887362051, guid: c309c598bc95ad743adbac73c3c79198, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026967652270562286, guid: c309c598bc95ad743adbac73c3c79198, type: 3}
+      propertyPath: TriggerModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026967652270562286, guid: c309c598bc95ad743adbac73c3c79198, type: 3}
+      propertyPath: SubModule.subEmitters.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026967652270562286, guid: c309c598bc95ad743adbac73c3c79198, type: 3}
+      propertyPath: TriggerModule.primitives.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026967652270562286, guid: c309c598bc95ad743adbac73c3c79198, type: 3}
+      propertyPath: SubModule.subEmitters.Array.data[1].type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026967652270562286, guid: c309c598bc95ad743adbac73c3c79198, type: 3}
+      propertyPath: SubModule.subEmitters.Array.data[1].emitProbability
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -294,6 +294,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 44168533}
     m_Modifications:
     - target: {fileID: 2172892681019733492, guid: 48172c96b1ccc5445815fd42916ff6ea, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 2062254794}
+    - target: {fileID: 2172892681019733492, guid: 48172c96b1ccc5445815fd42916ff6ea, type: 3}
       propertyPath: inStorm
       value: 0
       objectReference: {fileID: 0}
@@ -857,6 +861,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 239776969254663579, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
+      propertyPath: ammoDisplay
+      value: 
+      objectReference: {fileID: 2062254793}
     - target: {fileID: 698276201268987710, guid: e1875ca4e92c0664fa3526b14edbce30, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -969,6 +977,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 44168533}
     m_Modifications:
+    - target: {fileID: 2172892681019733492, guid: 48172c96b1ccc5445815fd42916ff6ea, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 2062254794}
     - target: {fileID: 2172892681019733492, guid: 48172c96b1ccc5445815fd42916ff6ea, type: 3}
       propertyPath: inStorm
       value: 0
@@ -1187,6 +1199,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 44168533}
     m_Modifications:
     - target: {fileID: 2172892681019733492, guid: 48172c96b1ccc5445815fd42916ff6ea, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 2062254794}
+    - target: {fileID: 2172892681019733492, guid: 48172c96b1ccc5445815fd42916ff6ea, type: 3}
       propertyPath: isEdge
       value: 0
       objectReference: {fileID: 0}
@@ -1347,12 +1363,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 667094443941913624, guid: cf4cd6c51ae725b47b9213253fd02453, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
-      value: 0
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 809704044742605478, guid: cf4cd6c51ae725b47b9213253fd02453, type: 3}
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3719316024096584872, guid: cf4cd6c51ae725b47b9213253fd02453, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 621095094}
     - target: {fileID: 5235368142928966050, guid: cf4cd6c51ae725b47b9213253fd02453, type: 3}
       propertyPath: playerTransform
       value: 
@@ -1446,6 +1466,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf4cd6c51ae725b47b9213253fd02453, type: 3}
+--- !u!114 &2062254793 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5774570036496562500, guid: cf4cd6c51ae725b47b9213253fd02453, type: 3}
+  m_PrefabInstance: {fileID: 2062254792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!225 &2062254794 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 5611916778167568768, guid: cf4cd6c51ae725b47b9213253fd02453, type: 3}
+  m_PrefabInstance: {fileID: 2062254792}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3736998637126691272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1454,6 +1490,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 44168533}
     m_Modifications:
+    - target: {fileID: 2172892681019733492, guid: 48172c96b1ccc5445815fd42916ff6ea, type: 3}
+      propertyPath: fade
+      value: 
+      objectReference: {fileID: 2062254794}
     - target: {fileID: 2172892681019733492, guid: 48172c96b1ccc5445815fd42916ff6ea, type: 3}
       propertyPath: isEdge
       value: 0

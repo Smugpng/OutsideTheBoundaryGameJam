@@ -12,19 +12,12 @@ public class Compass : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         boat = GameObject.FindGameObjectWithTag("Boat");
-        if (boat.activeInHierarchy)
-        {
-            curentTransform = boat.transform;
-        }
-        else
-        {
-            curentTransform = player.transform;
-        }
+        
     }
 
     private void Update()
     {
-        if (boat.activeInHierarchy)
+        if (boat!= null)
         {
             curentTransform = boat.transform;
         }

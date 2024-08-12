@@ -95,8 +95,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.81, y: 6.9514365, z: 11.082489}
-  m_Center: {x: 0, y: 3.464877, z: 0}
+  m_Size: {x: 4.81, y: 2.590247, z: 11.082489}
+  m_Center: {x: 0, y: 1.2842821, z: 0}
 --- !u!54 &3290797425947948025
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -105,8 +105,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601197553289296802}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 2
+  m_Drag: 5
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3215eee5dca11f4e85ed4e345d1ca50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AirDrag: 1
-  WaterDrag: 11.17
+  AirDrag: 2
+  WaterDrag: 5
   AffectDirection: 1
   AttachToSurface: 1
   FloatPoints:
@@ -145,7 +145,6 @@ MonoBehaviour:
   - {fileID: 5028740301627686659}
   - {fileID: 8048326588617834993}
   - {fileID: 6430846361143106606}
-  inWater: 0
   Waves: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!114 &8002418173289222285
@@ -161,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Motor: {fileID: 1094161107509181789}
-  SteerPower: 500
+  SteerPower: 10
   Power: 5
   MaxSpeed: 10
   Drag: 0.49
@@ -260,7 +259,7 @@ Transform:
   m_GameObject: {fileID: 3811725180573792271}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 4.355, z: -1.692}
+  m_LocalPosition: {x: 0.06, y: 3.86, z: -1.692}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -442,11 +441,43 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 64109184582785190, guid: dbc3416fef5328d439703987c11a9cd0, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64109184582785190, guid: dbc3416fef5328d439703987c11a9cd0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64346012297106360, guid: dbc3416fef5328d439703987c11a9cd0, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64346012297106360, guid: dbc3416fef5328d439703987c11a9cd0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64381987052909254, guid: dbc3416fef5328d439703987c11a9cd0, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64381987052909254, guid: dbc3416fef5328d439703987c11a9cd0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 64501809227916162, guid: dbc3416fef5328d439703987c11a9cd0, type: 3}
       propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 64501809227916162, guid: dbc3416fef5328d439703987c11a9cd0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64933671601470192, guid: dbc3416fef5328d439703987c11a9cd0, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64933671601470192, guid: dbc3416fef5328d439703987c11a9cd0, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}

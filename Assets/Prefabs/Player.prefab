@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3226449189660890834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 185617328499260216}
+  m_Layer: 0
+  m_Name: Attack Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &185617328499260216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3226449189660890834}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.09767723, y: 0.539, z: 0.872}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2015176511302580806}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6302536675445872747
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,7 +45,8 @@ GameObject:
   - component: {fileID: 8365720589624806565}
   - component: {fileID: 698276201268987710}
   - component: {fileID: 2666034950023777421}
-  m_Layer: 0
+  - component: {fileID: 239776969254663579}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -37,6 +69,7 @@ Transform:
   - {fileID: 8476754830124349594}
   - {fileID: 2937535520127185289}
   - {fileID: 4805612548670869241}
+  - {fileID: 185617328499260216}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &6639358250933118728
@@ -153,6 +186,30 @@ MonoBehaviour:
   waterBoat: {fileID: 0}
   boatCam: {fileID: 0}
   player: {fileID: 0}
+--- !u!114 &239776969254663579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302536675445872747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2be7185605f4a44d8e14fe3e295ee51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1947455054320766239, guid: e0f114df4fb28234fb61f149d0343585, type: 3}
+  shootForce: 300
+  upwardForce: 0
+  cooldown: 0.5
+  spread: 3
+  reloadTimer: 1.5
+  timeBetweenShots: 0.5
+  magSize: 12
+  bulletsPerTap: 1
+  allowButtonHold: 0
+  attackPoint: {fileID: 185617328499260216}
+  ammoDisplay: {fileID: 0}
 --- !u!1 &6849461210408793294
 GameObject:
   m_ObjectHideFlags: 0

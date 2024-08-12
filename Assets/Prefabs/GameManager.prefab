@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   check: 0
   enemyPrefabs:
-  - {fileID: 177072, guid: 27953ea55848f7a48897c38360d8b331, type: 3}
+  - {fileID: 7003761859823692239, guid: 605ef4b6491306b4c85ea885d4cbfdda, type: 3}
   spawnLocations:
   - {fileID: 5995141773220785544}
 --- !u!1 &4662037384457925151

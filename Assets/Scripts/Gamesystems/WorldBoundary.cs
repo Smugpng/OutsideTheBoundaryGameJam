@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class WorldBoundary : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class WorldBoundary : MonoBehaviour
     private int sceneNumber;
     [SerializeField] private bool isEdge;
     [SerializeField] private bool inStorm;
+    public CanvasGroup fade;
+    public bool startFade = false;
     public enum BorderDirection
     {
         North,
@@ -30,13 +33,18 @@ public class WorldBoundary : MonoBehaviour
     }
     private void Update()
     {
-     
+
+        if (startFade)
+        {
+            fade.alpha += Time.deltaTime/2;
+        }
     }
 
     private void NextScene(BorderDirection borderDirection)
     {
         if (!inStorm)
         {
+            startFade = true ;
             PlayerPrefs.SetInt("ThreatMultiplier", +1);
             if (borderDirection == BorderDirection.North)
             {
@@ -91,6 +99,7 @@ public class WorldBoundary : MonoBehaviour
         }
         else
         {
+            startFade = true;
             Invoke("LoadNextScene", 1f);
         }
         
