@@ -6,6 +6,7 @@ public class MainObj : MonoBehaviour
 {
     public float goldEarned = 0;
     public float globalTimer = 0;
+    public float goldNeededtoWin;
 
     private void Start()
     {
@@ -16,9 +17,14 @@ public class MainObj : MonoBehaviour
     {
         globalTimer += Time.deltaTime;
         PlayerPrefs.SetFloat("Timer",globalTimer);
-        if(globalTimer >= 5)
+        if(globalTimer >= 300)
         {
+            Debug.LogWarning("times up");
            //EndGame();
+        }
+        if(goldEarned >= goldNeededtoWin)
+        {
+            //WinGame
         }
     }
     public void EarnGold()

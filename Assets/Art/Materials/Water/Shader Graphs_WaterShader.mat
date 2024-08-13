@@ -42,17 +42,21 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fade: 1.19
+    - _Fade: 1.24
     - _Fresnel_Power: 1
     - _Height: 0
-    - _Offset: -0.13
+    - _Offset: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Reflection_factor: 50
+    - _RippleCount: 0.4
+    - _RippleSpeed: -0.52
+    - _RippleStregnth: 1.99
     m_Colors:
     - Valleys: {r: 0.46844962, g: 0.78116363, b: 0.8207547, a: 0}
     - _FernelColor: {r: 0.09678713, g: 0.21769503, b: 0.23584908, a: 0}
     - _Peaks: {r: 0.63834995, g: 0.8962264, b: 0.8728441, a: 0}
+    - _RippleCenter: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8480450823763052377

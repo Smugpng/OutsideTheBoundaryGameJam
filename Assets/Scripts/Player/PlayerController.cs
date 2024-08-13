@@ -10,7 +10,8 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 12f;
     public float jumpPower = 1f;
     public float gravity = 20f;
-
+    public float pickupDistance;
+    public LayerMask collectables;
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
 
@@ -90,8 +91,18 @@ public class PlayerController : MonoBehaviour
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
 
-            #endregion
+
         }
+        #endregion
+
+        /*#region Handles pickups
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+                
+            bool pickUp = Physics.CheckSphere(transform.position, 10, collectables);
+            
+        }
+        #endregion*/
     }
     public void Test(float y)
     {
@@ -105,3 +116,4 @@ public class PlayerController : MonoBehaviour
 
 
 }
+

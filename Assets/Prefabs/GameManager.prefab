@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5834115167578034365}
   - component: {fileID: 7654416771291930165}
+  - component: {fileID: 2525718161231209001}
+  - component: {fileID: 2415042173173531017}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,6 +52,32 @@ MonoBehaviour:
   - {fileID: 7003761859823692239, guid: 605ef4b6491306b4c85ea885d4cbfdda, type: 3}
   spawnLocations:
   - {fileID: 5995141773220785544}
+--- !u!114 &2525718161231209001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015073468983447932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634bb5b9f1b4ef349b5ecb6e0d458dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2415042173173531017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015073468983447932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19409835a3b3b2e4db5c665803adbb24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldEarned: 0
+  globalTimer: 0
 --- !u!1 &4662037384457925151
 GameObject:
   m_ObjectHideFlags: 0

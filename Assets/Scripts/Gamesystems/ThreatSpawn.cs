@@ -21,7 +21,7 @@ public class ThreatSpawn : MonoBehaviour
         int randomNum = Random.Range(1, 10);
         if (randomNum <= spawnChance)
         {
-            Invoke("Spawn", 1f);
+            Invoke("Spawn", 30f);
         }
         else
         {

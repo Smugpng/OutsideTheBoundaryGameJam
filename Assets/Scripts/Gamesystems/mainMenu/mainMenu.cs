@@ -10,6 +10,8 @@ public class mainMenu : MonoBehaviour
     private void StartGame()
     {
         PlayerPrefs.SetInt("ThreatMultiplier", 0);
+        PlayerPrefs.SetFloat("gold",0);
+        PlayerPrefs.SetFloat("Timer",0);
         SceneManager.LoadScene(5);
     }
     private void Update()
