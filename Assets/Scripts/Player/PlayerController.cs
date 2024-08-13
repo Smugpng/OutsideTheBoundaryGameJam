@@ -36,8 +36,8 @@ public class PlayerController : MonoBehaviour
         if (characterController.isGrounded)
         {
             inWater = false;
+            
         }
-        
         #region Handles player movement
 
         Vector3 forward = transform.TransformDirection(Vector3.forward);
@@ -57,26 +57,29 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpPower;
+
         }
 
         else
         {
             moveDirection.y = moveDirectionY;
+
         }
 
         if (!characterController.isGrounded && !inWater)
         {
             moveDirection.y -= gravity * Time.deltaTime;
+
         }
         else if (!characterController.isGrounded && inWater)
         {
             moveDirection.y = 0;
+ 
             //float newY = transform.position.y - floatPoint.position.y;
             
           //Vector3 fuck = new Vector3(transform.position.x, floatPoint.position.y, transform.position.z);
             //transform.position = Vector3.MoveTowards(transform.position,fuck,2);
         }
-
         #endregion
 
         #region Handles rotation and camera movement
@@ -95,18 +98,11 @@ public class PlayerController : MonoBehaviour
         }
         #endregion
 
-        /*#region Handles pickups
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-                
-            bool pickUp = Physics.CheckSphere(transform.position, 10, collectables);
-            
-        }
-        #endregion*/
+       
     }
     public void Test(float y)
     {
-        if (!characterController.isGrounded)
+        if (!characterController.isGrounded && inWater)
         {
             Vector3 fuck = new Vector3(transform.position.x, y, transform.position.z);
             transform.position = fuck;

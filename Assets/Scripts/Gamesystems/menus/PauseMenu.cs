@@ -14,42 +14,42 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.interactable = false;
         pauseMenu.alpha = 0.0f;
     }
-    private void FixedUpdate()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused) 
+        if  (Input.GetKeyDown(KeyCode.Escape) && isPaused) 
+        { 
+             UnPause();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
         {
             Pause();
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
-        {
-            UnPause();
         }
 
     }
     public void Pause()
     {
+        isPaused = true;
         Time.timeScale = 0.0f;
-        isPaused =true;
         pauseMenu.interactable = true;
         pauseMenu.alpha = 1.0f;
-        
+        Debug.Log("Stop");
     }
     public void UnPause()
     {
-        Time.timeScale = 1.0f;
         isPaused = false;
+        Time.timeScale = 1.0f;
         pauseMenu.interactable = false;
         pauseMenu.alpha = 0.0f;
-        
+        Debug.Log("resume");
     }
     public void MainMenu()
     {
-        Time.timeScale = 1.0f;
+        UnPause();
         SceneManager.LoadScene(0);
     }
     public void Exit()
     {
-        Time.timeScale = 1.0f;
+        UnPause();
         Application.Quit();
     }
 }

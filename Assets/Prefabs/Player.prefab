@@ -166,6 +166,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3215eee5dca11f4e85ed4e345d1ca50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ground:
+    serializedVersion: 2
+    m_Bits: 64
+  boat:
+    serializedVersion: 2
+    m_Bits: 128
   AirDrag: 1
   WaterDrag: 0.1
   AffectDirection: 1

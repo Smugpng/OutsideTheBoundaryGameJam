@@ -3,11 +3,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
 public class WaterFloat : MonoBehaviour
 {
     //public properties
+    public LayerMask ground, boat;
     public float AirDrag = 1;
     public float WaterDrag = 10;
     public bool AffectDirection = true;
@@ -57,7 +59,27 @@ public class WaterFloat : MonoBehaviour
         centerOffset = PhysicsHelper.GetCenter(WaterLinePoints) - transform.position;
 
     }
+    private void Update()
+    {
+        if (playerController != null)
+        {
+            Vector3 hey = FloatPoints[0].position;
+            if (Physics.CheckSphere(hey, 5, ground))
+            {
+                Debug.Log("OnLand");
+            }
+            else if (Physics.CheckSphere(hey, 5, boat))
+            {
+                Debug.Log("OnLand");
+            }
+            else
+            {
+                playerController.Test(WaterLinePoints[0].y);
+                playerController.inWater = true;
+            }
 
+        }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -83,17 +105,13 @@ public class WaterFloat : MonoBehaviour
         TargetUp = PhysicsHelper.GetNormal(WaterLinePoints);
 
         //gravity
-        var gravity = Physics.gravity * 3;
+        var gravity = Physics.gravity * 5;
         Rigidbody.drag = AirDrag;
         if (WaterLine > Center.y)
         {
             
             Rigidbody.drag = WaterDrag;
-            if (playerController != null)
-            {
-                playerController.Test(WaterLinePoints[0].y);
-                playerController.inWater = true;
-            }
+            
             //under water
             if (AttachToSurface)
             {
@@ -151,6 +169,7 @@ public class WaterFloat : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawCube(new Vector3(Center.x, WaterLine, Center.z), Vector3.one * 1f);
             Gizmos.DrawRay(new Vector3(Center.x, WaterLine, Center.z), TargetUp * 1f);
+            Vector3 hey = FloatPoints[0].position;
         }
     }
 }

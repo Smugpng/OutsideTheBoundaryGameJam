@@ -46,11 +46,11 @@ public class SwapFunctions : MonoBehaviour
             boatCam.SetActive(false);
             waterBoat.enabled = false;
             player.SetActive(true);
-            player.transform.position = playerSpawnPos.position;
             //player.transform.rotation
             thisSwap.enabled = false;
             rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
- 
+            player.transform.position = playerSpawnPos.position;
+
         }
         else if(tag == "Player")
         {
