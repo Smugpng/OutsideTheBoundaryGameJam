@@ -117,6 +117,10 @@ MonoBehaviour:
   runSpeed: 12
   jumpPower: 5
   gravity: 9.81
+  pickupDistance: 0
+  collectables:
+    serializedVersion: 2
+    m_Bits: 0
   lookSpeed: 2
   lookXLimit: 45
   moveDirection: {x: 0, y: 0, z: 0}
@@ -190,7 +194,7 @@ MonoBehaviour:
   player: {fileID: 0}
   boat:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &239776969254663579
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -30,4 +30,8 @@ public class mainMenu : MonoBehaviour
     {
         startFade = true;
     }
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }

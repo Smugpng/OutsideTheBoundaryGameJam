@@ -34,6 +34,10 @@ public class EnemyAI : MonoBehaviour
     }
     private void Update()
     {
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
         CheckRange();
         if (!playerInSight && !playerInAttack)
         {

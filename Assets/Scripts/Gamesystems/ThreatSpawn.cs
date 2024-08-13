@@ -30,13 +30,11 @@ public class ThreatSpawn : MonoBehaviour
     public void Spawn()
     {
         GameObject Enemies = new GameObject("enemies");
-        foreach ( Transform t in spawnLocations )
+        for(int i = 0; i < spawnLocations.Length; i++) 
         {
-            int i = 0;
             GameObject enemy = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Length)]);
             enemy.transform.parent = Enemies.transform;
             enemy.transform.position = spawnLocations[i].position;
-            i++;
         }
     }
     private void Update()
