@@ -61,24 +61,7 @@ public class WaterFloat : MonoBehaviour
     }
     private void Update()
     {
-        if (playerController != null)
-        {
-            Vector3 hey = FloatPoints[0].position;
-            if (Physics.CheckSphere(hey, 5, ground))
-            {
-                Debug.Log("OnLand");
-            }
-            else if (Physics.CheckSphere(hey, 5, boat))
-            {
-                Debug.Log("OnLand");
-            }
-            else
-            {
-                playerController.Test(WaterLinePoints[0].y);
-                playerController.inWater = true;
-            }
-
-        }
+        
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -115,15 +98,37 @@ public class WaterFloat : MonoBehaviour
             //under water
             if (AttachToSurface)
             {
+                if (playerController != null)
+                {
+                    Vector3 hey = FloatPoints[0].position;
+                    if (Physics.CheckSphere(hey, 5, ground))
+                    {
+                        Debug.Log("OnLand");
+                    }
+                    else if (Physics.CheckSphere(hey, 5, boat))
+                    {
+                        Debug.Log("OnLand");
+                    }
+                    else
+                    {
+                        playerController.Test(WaterLinePoints[0].y);
+                        playerController.inWater = true;
+                    }
+
+                }
+                else
+                {
+                    //attach to water surface
+                    Rigidbody.position = new Vector3(Rigidbody.position.x, WaterLine - centerOffset.y, Rigidbody.position.z);
+                }
                 
-                //attach to water surface
-                Rigidbody.position = new Vector3(Rigidbody.position.x, WaterLine - centerOffset.y, Rigidbody.position.z);
             }
             else
             {
                 //go up
                 gravity = AffectDirection ? TargetUp * -Physics.gravity.y : -Physics.gravity;
                 transform.Translate(Vector3.up * waterLineDelta * 0.9f);
+                
             }
         }
         Rigidbody.AddForce(gravity * Mathf.Clamp(Mathf.Abs(WaterLine - Center.y), 0, 1));
