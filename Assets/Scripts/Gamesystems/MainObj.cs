@@ -1,35 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainObj : MonoBehaviour
 {
     public float goldEarned = 0;
     public float globalTimer = 0;
-    public float goldNeededtoWin;
+    protected float goldNeededtoWin = 5000;
 
     private void Start()
     {
-        goldEarned += PlayerPrefs.GetFloat("gold");
-        globalTimer += PlayerPrefs.GetFloat("Timer");
+        goldEarned = PlayerPrefs.GetFloat("gold");
+        globalTimer = PlayerPrefs.GetFloat("Timer");
     }
     private void Update()
     {
+        goldEarned = PlayerPrefs.GetFloat("gold");
         globalTimer += Time.deltaTime;
         PlayerPrefs.SetFloat("Timer",globalTimer);
-        if(globalTimer >= 300)
-        {
-            Debug.LogWarning("times up");
-           //EndGame();
+        if(globalTimer > 300)
+        { 
+            SceneManager.LoadScene(11);
         }
         if(goldEarned >= goldNeededtoWin)
         {
-            //WinGame
+
+            SceneManager.LoadScene(12);
         }
     }
-    public void EarnGold()
-    {
-        goldEarned += 100;
-        PlayerPrefs.SetFloat("gold", goldEarned);
-    }
+    
 }

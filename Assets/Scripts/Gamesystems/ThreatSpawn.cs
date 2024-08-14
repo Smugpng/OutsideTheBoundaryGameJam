@@ -19,12 +19,14 @@ public class ThreatSpawn : MonoBehaviour
     {
         spawnChance += PlayerPrefs.GetInt("ThreatMultiplier");
         int randomNum = Random.Range(1, 10);
-        if (randomNum <= spawnChance)
+        if (randomNum <= spawnChance +1)
         {
-            Invoke("Spawn", 30f);
+            Debug.Log("Spawning");
+            Invoke("Spawn", 10f);
         }
         else
         {
+            Debug.Log("Not Spawning");
         }
     }
     public void Spawn()

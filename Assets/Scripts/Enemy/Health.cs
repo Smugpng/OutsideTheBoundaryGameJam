@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         health = maxHealth;
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         mainRB = GetComponent<Rigidbody>();
         mainCollider = GetComponent<CapsuleCollider>();
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -84,6 +84,7 @@ public class Health : MonoBehaviour
         {
             rb.isKinematic = false;
         }
+        animator.enabled = false;
         mainCollider.enabled = false;
         mainRB.isKinematic = true;
         EnemyAI.enabled = false;
@@ -100,6 +101,7 @@ public class Health : MonoBehaviour
         {
             rb.isKinematic = true;
         }
+        animator.enabled = true;   
         mainCollider.enabled = true;
         mainRB.isKinematic = false;
         navMeshAgent.enabled = true;

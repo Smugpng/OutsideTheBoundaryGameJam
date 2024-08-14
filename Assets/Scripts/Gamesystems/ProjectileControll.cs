@@ -20,7 +20,7 @@ public class ProjectileControll : MonoBehaviour
         _rb.isKinematic = true;
         _meshRenderer.enabled = false;
         _particleSystem.Play();
-        Invoke("destroy", 4f);
+        Invoke("destroy", 1f);
     }
     private void destroy()
     {

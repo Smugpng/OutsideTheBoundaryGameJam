@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     private CapsuleCollider hitbox;
     [SerializeField] private GameManager gameManager;
     private PlayerController controller;
-    [Header("Health must be 1-10")]
-    public float maxHealth = 10;
 
     [SerializeField] private float health;
     [SerializeField] public float drownTimer =0;
@@ -20,7 +19,9 @@ public class PlayerHealth : MonoBehaviour
     }
     private void Start()
     {
-        health = maxHealth;
+        PlayerPrefs.SetFloat("PlayerMaxhealth", 10);
+        health = PlayerPrefs.GetFloat("PlayerMaxhealth");
+        PlayerPrefs.SetFloat("PlayerCurhealth", health);
     }
     private void Update()
     {
@@ -32,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
         }
         if(health <= 0)
         {
-            gameManager.GoToMainMenu();
+            SceneManager.LoadScene(11);
         }
     }
     void DrownTimer()
@@ -57,6 +58,7 @@ public class PlayerHealth : MonoBehaviour
     void TakeDmg()
     {
         health--;
+        PlayerPrefs.SetFloat("PlayerCurhealth", health);
         Invoke("ResetCooldown", 1);
     }
     void ResetCooldown()

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public AudioSource AudioSource;
     bool isPaused;
     CanvasGroup pauseMenu;
     private void Start()
@@ -17,12 +18,20 @@ public class PauseMenu : MonoBehaviour
     private void Update()
     {
         if  (Input.GetKeyDown(KeyCode.Escape) && isPaused) 
-        { 
-             UnPause();
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            AudioSource.Play();
+            UnPause();
+            
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            AudioSource.Play();
             Pause();
+            
         }
 
     }

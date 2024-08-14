@@ -9,13 +9,11 @@ using UnityEngine.InputSystem;
 public class WaterFloat : MonoBehaviour
 {
     //public properties
-    public LayerMask ground, boat;
     public float AirDrag = 1;
     public float WaterDrag = 10;
     public bool AffectDirection = true;
     public bool AttachToSurface = false;
     public Transform[] FloatPoints;
-    //public bool inWater;
     private bool isPlayer;
 
     //used components
@@ -92,35 +90,21 @@ public class WaterFloat : MonoBehaviour
         Rigidbody.drag = AirDrag;
         if (WaterLine > Center.y)
         {
-            
+            if (playerController != null && WaterLine > transform.position.y)
+            {
+                playerController.Test(WaterLine);
+            }
+            else if(playerController == null)
+            {
+                //attach to water surface
+                Rigidbody.position = new Vector3(Rigidbody.position.x, WaterLine - centerOffset.y, Rigidbody.position.z);
+            }
             Rigidbody.drag = WaterDrag;
             
             //under water
             if (AttachToSurface)
             {
-                if (playerController != null)
-                {
-                    Vector3 hey = FloatPoints[0].position;
-                    if (Physics.CheckSphere(hey, 5, ground))
-                    {
-                        Debug.Log("OnLand");
-                    }
-                    else if (Physics.CheckSphere(hey, 5, boat))
-                    {
-                        Debug.Log("OnLand");
-                    }
-                    else
-                    {
-                        playerController.Test(WaterLinePoints[0].y);
-                        playerController.inWater = true;
-                    }
-
-                }
-                else
-                {
-                    //attach to water surface
-                    Rigidbody.position = new Vector3(Rigidbody.position.x, WaterLine - centerOffset.y, Rigidbody.position.z);
-                }
+                
                 
             }
             else

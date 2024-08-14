@@ -5,26 +5,27 @@ using UnityEngine.EventSystems;
 public class PlayerController : MonoBehaviour
 {
     CharacterController characterController;
+    WaterFloat WaterFloat;
+    public LayerMask ground, boat;
     public Camera playerCamera;
     public float walkSpeed = 6f;
     public float runSpeed = 12f;
     public float jumpPower = 1f;
     public float gravity = 20f;
     public float pickupDistance;
-    public LayerMask collectables;
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
-
+    public bool inWater;
     public Vector3 moveDirection = Vector3.zero;
     public Transform floatPoint;
     float rotationX = 0;
 
     public bool canMove = true;
-    public bool inWater = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        WaterFloat = GetComponent<WaterFloat>();
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -33,10 +34,19 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (characterController.isGrounded)
+        if (Physics.CheckSphere(floatPoint.position, 1.5f, ground) || Physics.CheckSphere(floatPoint.position, 1.5f, boat))
         {
+            Debug.Log("OnLand");
+            WaterFloat.enabled = false;
             inWater = false;
-            
+            floatPoint.gameObject.SetActive(false);
+        }
+        else
+        {
+            inWater = true;
+            floatPoint.gameObject.SetActive(true);
+            Debug.Log("InWater");
+            WaterFloat.enabled = true;
         }
         #region Handles player movement
 
@@ -66,12 +76,12 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        if (!characterController.isGrounded && !inWater)
+        if (!characterController.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
 
         }
-        else if (!characterController.isGrounded && inWater)
+        else if (!characterController.isGrounded)
         {
             moveDirection.y = 0;
  
@@ -102,14 +112,14 @@ public class PlayerController : MonoBehaviour
     }
     public void Test(float y)
     {
-        if (!characterController.isGrounded && inWater)
+        if (!characterController.isGrounded)
         {
-            Vector3 fuck = new Vector3(transform.position.x, y, transform.position.z);
-            transform.position = fuck;
+            if(floatPoint.position.y < y) 
+            {
+                moveDirection.y = +2;
+            }
+            
         }
     }
-
-
-
 }
 

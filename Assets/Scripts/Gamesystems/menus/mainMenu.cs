@@ -7,16 +7,26 @@ public class mainMenu : MonoBehaviour
 {
     public CanvasGroup fade;
     public bool startFade = false;
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        PlayerPrefs.SetInt("ThreatMultiplier", 0);
+        PlayerPrefs.SetFloat("gold", 0);
+        PlayerPrefs.SetFloat("Timer", 0);
+    }
     private void StartGame()
     {
         PlayerPrefs.SetInt("ThreatMultiplier", 0);
         PlayerPrefs.SetFloat("gold",0);
-        PlayerPrefs.SetFloat("Timer",0);
+        PlayerPrefs.SetFloat("Timer", 0);
         SceneManager.LoadScene(5);
     }
     private void Update()
     {
-        if(startFade)
+        Debug.Log(PlayerPrefs.GetFloat("gold")+"Gold");;
+        Debug.Log(PlayerPrefs.GetFloat("Timer") + "Time"); ;
+        if (startFade)
         {
             fade.alpha += Time.deltaTime *2;
             if (fade.alpha >= 1)

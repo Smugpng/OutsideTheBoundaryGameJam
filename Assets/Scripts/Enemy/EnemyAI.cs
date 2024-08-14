@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-
+    public Animator animator;
     public NavMeshAgent agent;
     public Transform player;
     public LayerMask whatisGround, whatIsPlayer;
@@ -25,6 +25,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         if(player == null)
@@ -97,21 +98,26 @@ public class EnemyAI : MonoBehaviour
     private void Attack()
     {
         //Stop movement
+       // animator.SetBool("IsAttacking", true);
         agent.SetDestination(transform.position);
-        transform.LookAt(player);
+        Vector3 gulp = new Vector3(player.position.x, transform.position.y, player.position.z);
+        transform.LookAt(gulp);
         if (!attackCooldown)
         {
+            
             //Attack
             Rigidbody rigidbody = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rigidbody.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rigidbody.AddForce(transform.up * 8f, ForceMode.Impulse);
+            rigidbody.AddForce(transform.forward * 30f, ForceMode.Impulse);
+            rigidbody.AddForce(transform.up * 2f, ForceMode.Impulse);
 
             attackCooldown = true;
+           // animator.SetBool("IsAttacking", false);
             Invoke("ResetAttack", timeBetweenAttacks);
         }
     }
     private void ResetAttack()
     {
+        
         attackCooldown = false;
     }
     private void OnDrawGizmos()

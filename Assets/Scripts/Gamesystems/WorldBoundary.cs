@@ -45,7 +45,8 @@ public class WorldBoundary : MonoBehaviour
         if (!inStorm)
         {
             startFade = true ;
-            PlayerPrefs.SetInt("ThreatMultiplier", +1);
+            int gulp = PlayerPrefs.GetInt("ThreatMultiplier");
+            PlayerPrefs.SetInt("ThreatMultiplier", gulp + 1);
             if (borderDirection == BorderDirection.North)
             {
                 if (!isEdge)

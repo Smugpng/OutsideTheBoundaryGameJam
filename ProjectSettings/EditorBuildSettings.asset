@@ -38,6 +38,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stormy Scene.unity
     guid: b051cf93419d0be4e8eccfcbfdd30bd4
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: 7b899b6e7e9b0e444bf278c96b12c0e4
+  - enabled: 1
+    path: Assets/Scenes/Win Scene.unity
+    guid: bcbfa6c003fc04548a1acbfdf0711d75
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: dfcbe7cfdebb84e7b9416c31e6c07ba7, type: 3}
   m_UseUCBPForAssetBundles: 0
